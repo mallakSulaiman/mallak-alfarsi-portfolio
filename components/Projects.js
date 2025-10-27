@@ -66,6 +66,7 @@ export default function Projects() {
         "/images/WhatsApp/Statistics&Reports.jpg",
         "/images/WhatsApp/Usage_statistics.jpg",
         "/images/WhatsApp/WhatsApp-dashboard.jpg",
+        "/images/WhatsApp/WhatsApp_side.jpg",
       ],
 
       hasImages: true,
@@ -73,18 +74,35 @@ export default function Projects() {
       hasGithub: true
     },
     {
-      title: "AI WhatsApp Chatbot",
+      title: "WhatsApp Business API System",
       company: "Sahalat LLC",
-      description: "Smart chatbot powered by OpenAI to handle automatic responses. Enhanced customer interaction through intelligent automation.",
-      technologies: ["OpenAI", "Laravel", "Node.js", "WhatsApp API"],
-      features: ["AI-powered responses", "Customer interaction", "Intelligent automation"],
-      images: [
-        "/images/ai-chatbot-1.jpg"
+      description: "Ongoing development of WhatsApp Business API integration for managing business communications and customer interactions.",
+      technologies: [
+        "Laravel",
+        "Flutter",
+        "Livewire",
+        "WhatsApp Business API",
+        "Meta API",
+        "RESTful API",
+        "PostgreSQL"
       ],
-      liveDemo: "https://ai-chatbot.demo.com",
-      github: null,
+      features: [
+        "WhatsApp Business API integration",
+        "Customer message management",
+        "Automated responses",
+        "Multi-channel communication",
+        "Real-time messaging",
+        "Message templates",
+        "Customer database with PostgreSQL"
+      ],
+      images: [
+        "/images/chatbot -meta/1.jpg",
+        "/images/chatbot -meta/2.jpg",
+        "/images/chatbot -meta/3.jpg",
+        "/images/chatbot -meta/4.jpg",
+      ],
       hasImages: true,
-      hasLiveDemo: true,
+      hasLiveDemo: false,
       hasGithub: false
     },
     {
@@ -104,11 +122,11 @@ export default function Projects() {
       title: "Innotech.om – Company Website",
       company: "Innotech Company",
       description: "Official corporate website built with Squarespace. Led the complete website development including design customization, content strategy, and SEO implementation to establish strong online presence.",
-      technologies: ["Squarespace", "CSS", "SEO", "Responsive Design" ],
+      technologies: ["Squarespace", "CSS", "SEO", "Responsive Design"],
       features: ["Mobile-friendly", "SEO optimized", "Professional design", "Fast loading"],
       images: [
         "/images/innotech/innotechHOME.jpg",
-        
+
       ],
       liveDemo: "https://www.innotech.om",
       hasImages: true,
@@ -487,8 +505,8 @@ export default function Projects() {
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
                         className={`flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all duration-200 overflow-hidden ${index === currentImageIndex
-                            ? 'border-blue-500 bg-blue-50'
-                            : 'border-gray-300 bg-white hover:border-gray-400'
+                          ? 'border-blue-500 bg-blue-50'
+                          : 'border-gray-300 bg-white hover:border-gray-400'
                           }`}
                       >
                         <img
