@@ -43,13 +43,13 @@ export default function Projects() {
         "/images/workFlow_Dtaiels.jpg",
         "/images/workFlow_create.jpg",
         "/images/Client_Side.jpg",
-      
 
 
-        
-        
+
+
+
       ],
-      
+
       hasImages: true,
       hasLiveDemo: false,
       hasGithub: false
@@ -70,7 +70,7 @@ export default function Projects() {
         "/images/WhatsApp/Usage_statistics.jpg",
         "/images/WhatsApp/WhatsApp-dashboard.jpg",
       ],
-   
+
       hasImages: true,
       hasLiveDemo: false,
       hasGithub: true
@@ -101,7 +101,22 @@ export default function Projects() {
       liveDemo: "https://10d.om",
       hasImages: false,
       hasLiveDemo: true,
-    
+
+    },
+    {
+      title: "Innotech.om – Company Website",
+      company: "Innotech Company",
+      description: "Official corporate website built with Squarespace. Led the complete website development including design customization, content strategy, and SEO implementation to establish strong online presence.",
+      technologies: ["Squarespace", "CSS", "SEO", "Responsive Design" ],
+      features: ["Mobile-friendly", "SEO optimized", "Professional design", "Fast loading"],
+      images: [
+        "/images/innotech/innotechHOME.jpg",
+        
+      ],
+      liveDemo: "https://www.innotech.om",
+      hasImages: true,
+      hasLiveDemo: true,
+      hasGithub: false
     },
     {
       title: "EstrenArrow Website",
@@ -142,7 +157,7 @@ export default function Projects() {
 
   const nextImage = () => {
     if (selectedImage) {
-      setCurrentImageIndex((prev) => 
+      setCurrentImageIndex((prev) =>
         prev === selectedImage.images.length - 1 ? 0 : prev + 1
       )
     }
@@ -150,7 +165,7 @@ export default function Projects() {
 
   const prevImage = () => {
     if (selectedImage) {
-      setCurrentImageIndex((prev) => 
+      setCurrentImageIndex((prev) =>
         prev === 0 ? selectedImage.images.length - 1 : prev - 1
       )
     }
@@ -179,7 +194,7 @@ export default function Projects() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in full-stack development, 
+            A collection of projects showcasing my skills in full-stack development,
             from enterprise systems to innovative side projects.
           </p>
         </motion.div>
@@ -198,18 +213,18 @@ export default function Projects() {
               {project.hasImages && project.images.length > 0 ? (
                 <div className="mb-4">
                   {/* Main Image */}
-                  <div 
+                  <div
                     className="rounded-xl overflow-hidden bg-gray-100 h-48 cursor-pointer relative group"
                     onClick={() => openImageModal(project, 0)}
                   >
                     {/* Actual Image */}
-                    <img 
-                      src={project.images[0]} 
+                    <img
+                      src={project.images[0]}
                       alt={`${project.title} - Main Preview`}
                       className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                       onError={handleImageError}
                     />
-                    
+
                     {/* Fallback if image doesn't load */}
                     <div className="image-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
                       <div className="text-center">
@@ -220,14 +235,14 @@ export default function Projects() {
                         </p>
                       </div>
                     </div>
-                    
+
                     {/* Hover Overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                       <div className="bg-white rounded-full p-3 transform scale-0 group-hover:scale-100 transition-transform duration-300">
                         <Image className="w-6 h-6 text-blue-600" />
                       </div>
                     </div>
-                    
+
                     {/* Image Count Badge */}
                     {project.images.length > 1 && (
                       <div className="absolute top-3 right-3 bg-black bg-opacity-70 text-white px-2 py-1 rounded-full text-xs">
@@ -245,8 +260,8 @@ export default function Projects() {
                           className="flex-shrink-0 w-16 h-16 rounded-lg bg-gray-200 cursor-pointer hover:opacity-80 transition-opacity duration-200 overflow-hidden relative"
                           onClick={() => openImageModal(project, imgIndex)}
                         >
-                          <img 
-                            src={img} 
+                          <img
+                            src={img}
                             alt={`${project.title} - Thumbnail ${imgIndex + 1}`}
                             className="w-full h-full object-cover"
                             onError={(e) => {
@@ -287,17 +302,17 @@ export default function Projects() {
                 <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2">{project.title}</h3>
                 <p className="text-blue-600 font-semibold text-sm">{project.company}</p>
               </div>
-              
+
               {/* Project Description */}
               <p className="text-gray-600 mb-4 text-sm line-clamp-3">{project.description}</p>
-              
+
               {/* Technologies */}
               <div className="mb-4">
                 <h4 className="font-semibold text-gray-800 mb-2 text-sm">Technologies:</h4>
                 <div className="flex flex-wrap gap-1">
                   {project.technologies.map((tech, idx) => (
-                    <span 
-                      key={idx} 
+                    <span
+                      key={idx}
                       className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium"
                     >
                       {tech}
@@ -305,7 +320,7 @@ export default function Projects() {
                   ))}
                 </div>
               </div>
-              
+
               {/* Features */}
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Features:</h4>
@@ -323,7 +338,7 @@ export default function Projects() {
                   )}
                 </ul>
               </div>
-              
+
               {/* Action Buttons */}
               <div className="flex flex-wrap gap-3 pt-4 border-t border-gray-100">
                 {/* Live Demo Button */}
@@ -338,7 +353,7 @@ export default function Projects() {
                     Live Demo
                   </a>
                 ) : (
-                  <button 
+                  <button
                     disabled
                     className="flex items-center gap-2 text-gray-400 font-medium text-sm cursor-not-allowed"
                   >
@@ -359,7 +374,7 @@ export default function Projects() {
                     Code
                   </a>
                 ) : (
-                  <button 
+                  <button
                     disabled
                     className="flex items-center gap-2 text-gray-400 font-medium text-sm cursor-not-allowed"
                   >
@@ -370,7 +385,7 @@ export default function Projects() {
 
                 {/* View Images Button */}
                 {project.hasImages && project.images.length > 0 && (
-                  <button 
+                  <button
                     onClick={() => openImageModal(project, 0)}
                     className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors duration-200 ml-auto"
                   >
@@ -383,17 +398,15 @@ export default function Projects() {
               {/* Status Badge */}
               <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-100">
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${
-                    project.hasLiveDemo ? 'bg-green-500' : 'bg-gray-400'
-                  }`}></div>
+                  <div className={`w-2 h-2 rounded-full ${project.hasLiveDemo ? 'bg-green-500' : 'bg-gray-400'
+                    }`}></div>
                   <span className="text-xs text-gray-500">
                     {project.hasLiveDemo ? 'Demo Available' : 'No Demo'}
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${
-                    project.images.length > 0 ? 'bg-purple-500' : 'bg-gray-400'
-                  }`}></div>
+                  <div className={`w-2 h-2 rounded-full ${project.images.length > 0 ? 'bg-purple-500' : 'bg-gray-400'
+                    }`}></div>
                   <span className="text-xs text-gray-500">
                     {project.images.length > 0 ? `${project.images.length} Images` : 'No Images'}
                   </span>
@@ -424,8 +437,8 @@ export default function Projects() {
               {/* Image Display */}
               <div className="relative bg-gray-900 flex items-center justify-center min-h-[400px] max-h-[60vh]">
                 {/* Actual Image Display */}
-                <img 
-                  src={selectedImage.images[currentImageIndex]} 
+                <img
+                  src={selectedImage.images[currentImageIndex]}
                   alt={`${selectedImage.title} - Image ${currentImageIndex + 1}`}
                   className="max-w-full max-h-full object-contain"
                   onError={(e) => {
@@ -477,14 +490,13 @@ export default function Projects() {
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all duration-200 overflow-hidden ${
-                          index === currentImageIndex
+                        className={`flex-shrink-0 w-16 h-16 rounded-lg border-2 transition-all duration-200 overflow-hidden ${index === currentImageIndex
                             ? 'border-blue-500 bg-blue-50'
                             : 'border-gray-300 bg-white hover:border-gray-400'
-                        }`}
+                          }`}
                       >
-                        <img 
-                          src={img} 
+                        <img
+                          src={img}
                           alt={`Thumbnail ${index + 1}`}
                           className="w-full h-full object-cover"
                           onError={(e) => {
