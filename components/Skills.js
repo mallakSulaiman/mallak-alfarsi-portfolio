@@ -7,7 +7,7 @@ export default function Skills() {
     {
       title: "Languages & Frameworks",
       skills: [
-        { name: "PHP (Laravel, Livewire)", level: 90 },
+        { name: "PHP (Laravel, Livewire)", level: 95 },
         { name: "JavaScript (React.js, Next.js)", level: 85 },
         { name: "HTML/CSS", level: 95 },
         { name: "Node.js", level: 75 }
@@ -19,16 +19,15 @@ export default function Skills() {
         { name: "MySQL", level: 88 },
         { name: "PostgreSQL", level: 80 },
         { name: "MongoDB", level: 75 },
-        { name: "Redis", level: 70 }
       ]
     },
     {
       title: "Tools & Practices",
       skills: [
         { name: "Git/GitHub", level: 90 },
-        { name: "Docker", level: 75 },
-        { name: "Agile/Scrum", level: 85 },
-        { name: "DevOps (CI/CD)", level: 70 }
+        { name: "Docker", level: 60 },
+        { name: "Agile/Scrum", level: 55 },
+        { name: "DevOps (CI/CD)", level: 50 }
       ]
     }
   ]
