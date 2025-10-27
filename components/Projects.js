@@ -66,13 +66,11 @@ export default function Projects() {
         "/images/WhatsApp/Request.jpg",
         "/images/WhatsApp/Request_detaiels.jpg",
         "/images/WhatsApp/sampleOf_Reports.jpg",
-        "/images/WhatsApp/sidebare.jpg",
         "/images/WhatsApp/Statistics&Reports.jpg",
         "/images/WhatsApp/Usage_statistics.jpg",
         "/images/WhatsApp/WhatsApp-dashboard.jpg",
       ],
-      liveDemo: null,
-      github: "https://github.com/yourusername/whatsapp-chatbot",
+   
       hasImages: true,
       hasLiveDemo: false,
       hasGithub: true
