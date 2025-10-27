@@ -97,16 +97,11 @@ export default function Projects() {
       technologies: ["Laravel", "MySQL", "E-commerce", "Payment Gateway"],
       features: ["Shopping cart", "Product management", "User accounts", "Order processing"],
       images: [
-        "/images/10d-om-1.jpg",
-        "/images/10d-om-2.jpg",
-        "/images/10d-om-3.jpg",
-        "/images/10d-om-4.jpg"
       ],
       liveDemo: "https://10d.om",
-      github: "https://github.com/yourusername/10d-om",
-      hasImages: true,
+      hasImages: false,
       hasLiveDemo: true,
-      hasGithub: true
+    
     },
     {
       title: "EstrenArrow Website",
@@ -118,11 +113,9 @@ export default function Projects() {
         "/images/estrenarrow-1.jpg",
         "/images/estrenarrow-2.jpg"
       ],
-      liveDemo: null,
-      github: null,
-      hasImages: true,
+      liveDemo: "https://easternarrow.om",
+      hasImages: false,
       hasLiveDemo: false,
-      hasGithub: false
     },
     {
       title: "Meeting Booking System",
@@ -131,11 +124,9 @@ export default function Projects() {
       technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS"],
       features: ["Calendar integration", "Email notifications", "User management"],
       images: [],
-      liveDemo: "https://meeting-booking.demo.com",
-      github: "https://github.com/yourusername/meeting-booking",
       hasImages: false,
-      hasLiveDemo: true,
-      hasGithub: true
+      hasLiveDemo: false,
+      hasGithub: false
     }
   ]
 
