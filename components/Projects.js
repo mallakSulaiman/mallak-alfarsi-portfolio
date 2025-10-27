@@ -45,9 +45,6 @@ export default function Projects() {
         "/images/Client_Side.jpg",
 
 
-
-
-
       ],
 
       hasImages: true,
@@ -125,24 +122,23 @@ export default function Projects() {
       technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
       features: ["Responsive design", "Performance optimized", "SEO friendly"],
       images: [
-        "/images/estrenarrow-1.jpg",
-        "/images/estrenarrow-2.jpg"
+        "/images/easternarrow.jpg",
       ],
       liveDemo: "https://easternarrow.om",
-      hasImages: false,
-      hasLiveDemo: false,
+      hasImages: true,
+      hasLiveDemo: true,
     },
-    {
-      title: "Meeting Booking System",
-      company: "Side Project",
-      description: "Web application for managing bookings and schedules using Next.js with modern UI components.",
-      technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS"],
-      features: ["Calendar integration", "Email notifications", "User management"],
-      images: [],
-      hasImages: false,
-      hasLiveDemo: false,
-      hasGithub: false
-    }
+    // {
+    //   title: "Meeting Booking System",
+    //   company: "Side Project",
+    //   description: "Web application for managing bookings and schedules using Next.js with modern UI components.",
+    //   technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS"],
+    //   features: ["Calendar integration", "Email notifications", "User management"],
+    //   images: [],
+    //   hasImages: false,
+    //   hasLiveDemo: false,
+    //   hasGithub: false
+    // }
   ]
 
   const openImageModal = (project, imageIndex = 0) => {
