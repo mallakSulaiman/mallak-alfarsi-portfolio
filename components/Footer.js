@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="container-custom text-center">
         <p>&copy; 2024 Mallak Sulaiman Alfarsi. All rights reserved.</p>
         <p className="mt-2 text-gray-400">
-          Software Engineer | Web Developer
+          Software Engineering | Web Developer
         </p>
       </div>
     </footer>
