@@ -17,7 +17,7 @@ export default function Hero() {
           </h1>
           
           <h2 className="text-2xl md:text-3xl text-gray-600 mb-8">
-            Software Engineer
+            Software Engineering
           </h2>
           
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">
