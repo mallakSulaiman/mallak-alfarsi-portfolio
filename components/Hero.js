@@ -31,7 +31,7 @@ export default function Hero() {
               Get In Touch
             </a> */}
             <a 
-              href="/Mallak_Alfarsi_CV.pdf" 
+              href="/Mallak Al_Farsi_CV.pdf" 
               download 
               className="btn-secondary flex items-center justify-center gap-2"
             >
