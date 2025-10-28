@@ -33,7 +33,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-6">
-              Software Engineer with 3 years of experience in full-stack web development
+              Software Engineer with 3 years of experience in web development
             </h3>
             <p className="text-gray-600 mb-6">
               Skilled in Laravel, PHP, and JavaScript frameworks for building scalable web applications, 

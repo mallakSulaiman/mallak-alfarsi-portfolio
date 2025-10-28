@@ -6,11 +6,11 @@ import { Calendar, MapPin } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      title: "Full-Stack Developer",
+      title: "ًWeb Developer",
       company: "Sahalat LLC",
       period: "Oct 2022 – July 2025",
       location: "Muscat, Oman",
-      description: "Full-stack development of CRM systems, chatbots, and business applications using Laravel, Node.js, and modern web technologies.",
+      description: "Web development of CRM systems, chatbots, and business applications using Laravel,Livewire, React.js, Node.js, and modern web technologies.",
       achievements: [
         "Muain CRM development with real-time features",
         "AI WhatsApp chatbots with OpenAI integration",
