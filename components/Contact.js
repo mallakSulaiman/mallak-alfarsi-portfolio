@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Send } from 'lucide-react'
+import { Mail, Phone, MapPin, Send, MessageCircle, Linkedin } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Contact() {
@@ -32,6 +32,17 @@ export default function Contact() {
     })
   }
 
+  // WhatsApp click handler
+  const handleWhatsAppClick = () => {
+    const phoneNumber = '96896130994' // Your phone number without +
+    const message = 'Hello Mallak! I came across your portfolio and would like to connect with you.'
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`
+    window.open(whatsappUrl, '_blank')
+  }
+
+  // LinkedIn profile URL (replace with your actual LinkedIn URL)
+  const linkedinUrl = 'https://www.linkedin.com/in/mallak-alfarsi' // Update this with your LinkedIn URL
+
   return (
     <section id="contact" className="section-padding bg-white">
       <div className="container-custom">
@@ -61,26 +72,59 @@ export default function Contact() {
             <h3 className="text-2xl font-bold text-gray-800 mb-8">Contact Information</h3>
             
             <div className="space-y-6">
+              {/* Email */}
               <div className="flex items-center gap-4">
                 <div className="bg-blue-600 text-white p-3 rounded-lg">
                   <Mail size={24} />
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Email</h4>
-                  <p className="text-gray-600">Mallaksulaiman1@hotmail.com</p>
+                  <a 
+                    href="mailto:Mallaksulaiman1@hotmail.com" 
+                    className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
+                  >
+                    Mallaksulaiman1@hotmail.com
+                  </a>
                 </div>
               </div>
               
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-600 text-white p-3 rounded-lg">
-                  <Phone size={24} />
+              {/* WhatsApp - Clickable */}
+              <div 
+                className="flex items-center gap-4 cursor-pointer group"
+                onClick={handleWhatsAppClick}
+              >
+                <div className="bg-green-600 text-white p-3 rounded-lg group-hover:bg-green-700 transition-colors duration-300">
+                  <MessageCircle size={24} />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-800">Phone</h4>
-                  <p className="text-gray-600">+968 96130994</p>
+                  <h4 className="font-semibold text-gray-800">WhatsApp</h4>
+                  <p className="text-gray-600 group-hover:text-green-600 transition-colors duration-300">
+                    +968 96130994
+                  </p>
+                  <p className="text-sm text-green-500 mt-1">Click to chat on WhatsApp</p>
                 </div>
               </div>
               
+              {/* LinkedIn - Clickable */}
+              <a 
+                href={linkedinUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 group cursor-pointer"
+              >
+                <div className="bg-blue-700 text-white p-3 rounded-lg group-hover:bg-blue-800 transition-colors duration-300">
+                  <Linkedin size={24} />
+                </div>
+                <div>
+                  <h4 className="font-semibold text-gray-800">LinkedIn</h4>
+                  <p className="text-gray-600 group-hover:text-blue-700 transition-colors duration-300">
+                    Connect with me on LinkedIn
+                  </p>
+                  <p className="text-sm text-blue-500 mt-1">View my professional profile</p>
+                </div>
+              </a>
+              
+              {/* Location */}
               <div className="flex items-center gap-4">
                 <div className="bg-blue-600 text-white p-3 rounded-lg">
                   <MapPin size={24} />
@@ -92,18 +136,10 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* <div className="mt-12">
-              <h4 className="text-xl font-bold text-gray-800 mb-6">Additional Experience</h4>
-              <ul className="space-y-3 text-gray-600">
-                <li>• Software Engineering Training – Ministry of Interior (Feb 2021 – Apr 2021)</li>
-                <li>• Technical Support – Surgical Team Project at College (2018 – 2019)</li>
-                <li>• Team Supervisor – Injaz Digital Challenges</li>
-                <li>• Organizer – 4th iTech Marathon Competition (2019)</li>
-              </ul>
-            </div> */}
+           
           </motion.div>
 
-          {/* Contact Form */}
+          {/* Contact Form - Commented out as requested */}
           {/* <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -187,6 +223,8 @@ export default function Contact() {
             </form>
           </motion.div> */}
         </div>
+
+       
       </div>
     </section>
   )

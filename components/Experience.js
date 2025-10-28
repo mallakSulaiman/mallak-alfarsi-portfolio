@@ -6,15 +6,17 @@ import { Calendar, MapPin } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      title: "Web Developer",
+      title: "Full-Stack Developer",
       company: "Sahalat LLC",
       period: "Oct 2022 – July 2025",
       location: "Muscat, Oman",
-      description: "Led the development of core company systems and custom web solutions. Collaborated with teams to deliver scalable, secure, and user-friendly applications.",
+      description: "Full-stack development of CRM systems, chatbots, and business applications using Laravel, Node.js, and modern web technologies.",
       achievements: [
-        "CRM system development",
-        "API integrations",
-        "Chatbot systems implementation"
+        "Muain CRM development with real-time features",
+        "AI WhatsApp chatbots with OpenAI integration",
+        "WhatsApp Business API system implementation",
+        "Laravel corporate website development",
+        "Payment gateway and API integrations"
       ]
     },
     {
@@ -27,6 +29,19 @@ export default function Experience() {
         "E-commerce development",
         "SEO optimization",
         "Performance optimization"
+      ]
+    },
+    {
+      title: "Software Engineering Training",
+      company: "Ministry of Interior",
+      period: "Feb 2021 – Apr 2021",
+      location: "Oman",
+      description: "Intensive software engineering training program focusing on web development, team collaboration, and system performance optimization.",
+      achievements: [
+        "Web development with PHP and Java",
+        "Team-based project collaboration",
+        "System performance optimization",
+        "Debugging and problem-solving",
       ]
     }
   ]
@@ -71,9 +86,9 @@ export default function Experience() {
                   </div>
                 </div>
               </div>
-              
+
               <p className="text-gray-600 mb-4">{exp.description}</p>
-              
+
               <div>
                 <h5 className="font-semibold text-gray-800 mb-2">Key Achievements:</h5>
                 <ul className="list-disc list-inside text-gray-600 space-y-1">
@@ -88,4 +103,37 @@ export default function Experience() {
       </div>
     </section>
   )
+
+  //  {/* Additional Experience Section */}
+  //       <motion.div
+  //         initial={{ opacity: 0, y: 30 }}
+  //         whileInView={{ opacity: 1, y: 0 }}
+  //         transition={{ duration: 0.6, delay: 0.3 }}
+  //         viewport={{ once: true }}
+  //         className="mt-16 text-center"
+  //       >
+  //         <h4 className="text-2xl font-bold text-gray-800 mb-8">Additional Experience</h4>
+  //         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
+  //           <div className="bg-gray-50 p-6 rounded-lg">
+  //             <h5 className="font-semibold text-gray-800 mb-2">Software Engineering Training</h5>
+  //             <p className="text-gray-600 text-sm">Ministry of Interior</p>
+  //             <p className="text-gray-500 text-xs">Feb 2021 – Apr 2021</p>
+  //           </div>
+  //           <div className="bg-gray-50 p-6 rounded-lg">
+  //             <h5 className="font-semibold text-gray-800 mb-2">Technical Support</h5>
+  //             <p className="text-gray-600 text-sm">Surgical Team Project</p>
+  //             <p className="text-gray-500 text-xs">2018 – 2019</p>
+  //           </div>
+  //           <div className="bg-gray-50 p-6 rounded-lg">
+  //             <h5 className="font-semibold text-gray-800 mb-2">Team Supervisor</h5>
+  //             <p className="text-gray-600 text-sm">Injaz Digital Challenges</p>
+  //             <p className="text-gray-500 text-xs">Represented Oman</p>
+  //           </div>
+  //           <div className="bg-gray-50 p-6 rounded-lg">
+  //             <h5 className="font-semibold text-gray-800 mb-2">Event Organizer</h5>
+  //             <p className="text-gray-600 text-sm">4th iTech Marathon</p>
+  //             <p className="text-gray-500 text-xs">2019</p>
+  //           </div>
+  //         </div>
+  //       </motion.div>
 }
