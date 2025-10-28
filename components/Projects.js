@@ -208,7 +208,7 @@ export default function Projects() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Projects</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in full-stack development,
+            A collection of projects showcasing my skills in Web development,
             from enterprise systems to innovative side projects.
           </p>
         </motion.div>
