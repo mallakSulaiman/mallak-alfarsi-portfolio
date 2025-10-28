@@ -56,7 +56,7 @@ export default function Contact() {
           <h2 className="text-4xl font-bold text-gray-800 mb-4">Get In Touch</h2>
           <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            I'm always interested in new opportunities and exciting projects. 
+            I'm always interested in new opportunities and exciting projects.
             Let's discuss how we can work together!
           </p>
         </motion.div>
@@ -70,7 +70,7 @@ export default function Contact() {
             viewport={{ once: true }}
           >
             <h3 className="text-2xl font-bold text-gray-800 mb-8">Contact Information</h3>
-            
+
             <div className="space-y-6">
               {/* Email */}
               <div className="flex items-center gap-4">
@@ -79,17 +79,17 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-800">Email</h4>
-                  <a 
-                    href="mailto:Mallaksulaiman1@hotmail.com" 
+                  <a
+                    href="mailto:Mallaksulaiman1@hotmail.com"
                     className="text-gray-600 hover:text-blue-600 transition-colors duration-300"
                   >
                     Mallaksulaiman1@hotmail.com
                   </a>
                 </div>
               </div>
-              
+
               {/* WhatsApp - Clickable */}
-              <div 
+              <div
                 className="flex items-center gap-4 cursor-pointer group"
                 onClick={handleWhatsAppClick}
               >
@@ -104,11 +104,11 @@ export default function Contact() {
                   <p className="text-sm text-green-500 mt-1">Click to chat on WhatsApp</p>
                 </div>
               </div>
-              
+
               {/* LinkedIn - Clickable */}
-              <a 
-                href={linkedinUrl} 
-                target="_blank" 
+              <a
+                href="http://www.linkedin.com/in/mallak-alfarsi"
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 group cursor-pointer"
               >
@@ -120,10 +120,10 @@ export default function Contact() {
                   <p className="text-gray-600 group-hover:text-blue-700 transition-colors duration-300">
                     Connect with me on LinkedIn
                   </p>
-                  <p className="text-sm text-blue-500 mt-1">View my professional profile</p>
+                  <p className="text-sm text-blue-500 mt-1">View my profile</p>
                 </div>
               </a>
-              
+
               {/* Location */}
               <div className="flex items-center gap-4">
                 <div className="bg-blue-600 text-white p-3 rounded-lg">
@@ -136,7 +136,7 @@ export default function Contact() {
               </div>
             </div>
 
-           
+
           </motion.div>
 
           {/* Contact Form - Commented out as requested */}
@@ -224,7 +224,7 @@ export default function Contact() {
           </motion.div> */}
         </div>
 
-       
+
       </div>
     </section>
   )
