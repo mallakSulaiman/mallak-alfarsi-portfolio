@@ -8,7 +8,7 @@ export default function Experience() {
     {
       title: "ًWeb Developer",
       company: "Sahalat LLC",
-      period: "Oct 2022 – July 2025",
+      period: "16 Oct 2022 – 31 Oct 2025",
       location: "Muscat, Oman",
       description: "Web development of CRM systems, chatbots, and business applications using Laravel,Livewire, React.js, Node.js, and modern web technologies.",
       achievements: [
@@ -16,19 +16,41 @@ export default function Experience() {
         "AI WhatsApp chatbots with OpenAI integration",
         "WhatsApp Business API system implementation",
         "Laravel corporate website development",
-        "Payment gateway and API integrations"
+        "Payment gateway and API integrations",
+        "Performance optimization and security enhancements",
+        "Collaborated with cross-functional teams",
+        "Maintained documentation and best practices",  
+        "Deployed applications to cloud platforms",
+        "Provided technical support and troubleshooting",
+        "Implemented user authentication and authorization",
+        "Utilized version control with Git and GitHub",
+        "Adopted Agile methodologies for project management",
+        "Integrated third-party services and APIs",
+        "Optimized database queries and schema design",
+        "Implemented caching strategies for improved performance",
+        "Wrote unit and integration tests to ensure code quality",
+        "Participated in client meetings to gather requirements",
+             
+
+        
       ]
     },
     {
-      title: "Web Developer",
+      title: "Web Developer- Freelancer",
       company: "Innotech Company",
-      period: "Jan 2020 – Oct 2023",
+      period: " 31 Jan 2020 – 31 Oct 2023 ",
       location: "Muscat, Oman",
       description: "Contributed to building e-commerce and corporate websites. Assisted in deployment, maintenance, and technical support of web applications.",
       achievements: [
         "E-commerce development",
         "SEO optimization",
-        "Performance optimization"
+        "Performance optimization",
+        "Technical support and maintenance ",
+        "Client communication and requirement gathering",
+        "Collaborated with design and marketing teams",
+        "Implemented responsive design",
+        "Tested and debugged applications",
+
       ]
     },
     {
