@@ -6,7 +6,7 @@ import { Calendar, MapPin } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      title: "ًWeb Developer",
+      title: "Web Developer",
       company: "Sahalat LLC",
       period: "16 Oct 2022 – 31 Oct 2025",
       location: "Muscat, Oman",
