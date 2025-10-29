@@ -27,7 +27,11 @@ export default function Skills() {
         { name: "Git/GitHub", level: 90 },
         { name: "Docker", level: 60 },
         { name: "Agile/Scrum", level: 50 },
-        { name: "DevOps (CI/CD)", level: 50 }
+        { name: "DevOps", level: 50 },
+        { name: "Postman API", level: 90 },
+        { name: "Swagger ", level: 70 },
+        { name: "Figma , Mermaid.js, Draw.io ", level: 70 },
+
       ]
     }
   ]
