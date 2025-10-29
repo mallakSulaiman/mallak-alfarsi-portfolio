@@ -18,7 +18,7 @@ export default function Skills() {
       skills: [
         { name: "MySQL", level: 88 },
         { name: "PostgreSQL", level: 80 },
-        { name: "MongoDB", level: 75 },
+        { name: "MongoDB", level: 50 },
       ]
     },
     {
@@ -26,7 +26,7 @@ export default function Skills() {
       skills: [
         { name: "Git/GitHub", level: 90 },
         { name: "Docker", level: 60 },
-        { name: "Agile/Scrum", level: 55 },
+        { name: "Agile/Scrum", level: 50 },
         { name: "DevOps (CI/CD)", level: 50 }
       ]
     }
