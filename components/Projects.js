@@ -152,9 +152,10 @@ export default function Projects() {
       technologies: ["React", "JavaScript", "REST API", "CSS3"],
       features: ["Booking system", "Room management", "Responsive design"],
       images: [
-        "/images/booking_system/dhasboard.jpg",
-        "/images/booking_system/dhasboard.jpg",
         "/images/booking_system/login.jpg",
+        "/images/booking_system/dashboard1.jpg",
+        "/images/booking_system/dashboard2.jpg",
+        "/images/booking_system/dashboard3.jpg",
         "/images/booking_system/mybooking.jpg",
         "/images/booking_system/newbooking.jpg",      ],
       hasLiveDemo: false,
