@@ -146,17 +146,21 @@ export default function Projects() {
       hasImages: true,
       hasLiveDemo: true,
     },
-    // {
-    //   title: "Meeting Booking System",
-    //   company: "Side Project",
-    //   description: "Web application for managing bookings and schedules using Next.js with modern UI components.",
-    //   technologies: ["Next.js", "React", "MongoDB", "Tailwind CSS"],
-    //   features: ["Calendar integration", "Email notifications", "User management"],
-    //   images: [],
-    //   hasImages: false,
-    //   hasLiveDemo: false,
-    //   hasGithub: false
-    // }
+    {
+      title: "Meeting Booking System",
+      description: "React-based room booking platform with real-time availability and modern UI.",
+      technologies: ["React", "JavaScript", "REST API", "CSS3"],
+      features: ["Booking system", "Room management", "Responsive design"],
+      images: [
+        "/images/booking_system/dhasboard.jpg",
+        "/images/booking_system/dhasboard.jpg",
+        "/images/booking_system/login.jpg",
+        "/images/booking_system/mybooking.jpg",
+        "/images/booking_system/newbooking.jpg",      ],
+      hasLiveDemo: false,
+      hasGithub: False,
+      hasImages: true,
+    }
   ]
 
   const openImageModal = (project, imageIndex = 0) => {
