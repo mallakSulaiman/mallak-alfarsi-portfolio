@@ -158,7 +158,7 @@ export default function Projects() {
         "/images/booking_system/mybooking.jpg",
         "/images/booking_system/newbooking.jpg",      ],
       hasLiveDemo: false,
-      hasGithub: False,
+      hasGithub: false,
       hasImages: true,
     }
   ]
