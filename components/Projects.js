@@ -1,20 +1,50 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ExternalLink, Github, Image, X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ExternalLink, Github, Image, X, ChevronLeft, ChevronRight, ChevronDown, ChevronUp } from 'lucide-react'
 import { useState } from 'react'
 
 export default function Projects() {
   const [selectedImage, setSelectedImage] = useState(null)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
+  const [expandedProjects, setExpandedProjects] = useState({})
+
+  const toggleReadMore = (projectId) => {
+    setExpandedProjects(prev => ({
+      ...prev,
+      [projectId]: !prev[projectId]
+    }))
+  }
+
+  const truncateText = (text, maxLength = 120) => {
+    if (text.length <= maxLength) return text
+    return text.substring(0, maxLength) + '...'
+  }
 
   const projects = [
     {
+      id: 1,
       title: "Muain CRM & Services System",
       company: "Sahalat LLC",
-      description: "Laravel-based CRM system integrated with Ministry services. Built with Laravel 8, AJAX, MySQL, real-time socket notifications, and Bank Muscat payment gateway.",
-      technologies: ["Laravel", "MySQL", "AJAX", "WebSockets"],
-      features: ["Identity verification", "User roles", "Workflows", "Statistics", "Employee task handling"],
+      description: "Laravel-based CRM system integrated with Ministry services. Built with Laravel 8, AJAX, MySQL, real-time socket notifications, and Bank Muscat payment gateway. This comprehensive system handles complex workflows, user management, and integrates with various government services for seamless operation.",
+      technologies: ["Laravel", "MySQL", "AJAX", "WebSockets", "Payment Gateway", "Real-time Notifications"],
+      features: [
+        "Identity verification and validation",
+        "Multi-level user roles and permissions",
+        "Complex workflow management system",
+        "Advanced statistics and reporting dashboard",
+        "Employee task assignment and tracking",
+        "Real-time notifications using WebSockets",
+        "Bank Muscat payment gateway integration",
+        "Multi-language support (Arabic/English)",
+        "PDF generation and document management",
+        "Timing profiles and working hours management",
+        "Service workflow customization",
+        "Ticket management with status tracking",
+        "Department-based ticket assignment",
+        "Automated email notifications",
+        "Client-side portal for service requests"
+      ],
       images: [
         "/images/admin_Dashboard.jpg",
         "/images/Emplyee_dashboard1.jpg",
@@ -43,20 +73,31 @@ export default function Projects() {
         "/images/workFlow_Dtaiels.jpg",
         "/images/workFlow_create.jpg",
         "/images/Client_Side.jpg",
-
-
       ],
-
       hasImages: true,
       hasLiveDemo: false,
       hasGithub: false
     },
     {
+      id: 2,
       title: "Virtual Assistant Chatbot (WhatsApp)",
       company: "Sahalat LLC",
-      description: "Automated WhatsApp support bot using Node.js, Laravel, and Puppeteer to improve response times and efficiency.",
-      technologies: ["Node.js", "Laravel", "Puppeteer", "WhatsApp API"],
-      features: ["Automated responses", "Efficiency improvement", "24/7 support"],
+      description: "Automated WhatsApp support bot using Node.js, Laravel, and Puppeteer to improve response times and efficiency. This system handles customer inquiries, provides automated responses, and integrates with existing CRM systems for seamless customer support management.",
+      technologies: ["Node.js", "Laravel", "Puppeteer", "WhatsApp API", "RESTful API", "MySQL"],
+      features: [
+        "Automated customer response system",
+        "24/7 customer support availability",
+        "Integration with CRM for customer data",
+        "Multi-language support capabilities",
+        "Advanced reporting and analytics dashboard",
+        "Message template management",
+        "Customer conversation history",
+        "Real-time message processing",
+        "Multi-agent support system",
+        "Automated follow-up messages",
+        "Customer satisfaction tracking",
+        "Performance monitoring and optimization"
+      ],
       images: [
         "/images/WhatsApp/WhatsApp-dashboard.jpg",
         "/images/WhatsApp/Main_menu_settings.jpg",
@@ -68,15 +109,15 @@ export default function Projects() {
         "/images/WhatsApp/WhatsApp-dashboard.jpg",
         "/images/WhatsApp/WhatsApp_side.jpg",
       ],
-
       hasImages: true,
       hasLiveDemo: false,
       hasGithub: true
     },
     {
+      id: 3,
       title: "WhatsApp Business API System",
       company: "Sahalat LLC",
-      description: "Ongoing development of WhatsApp Business API integration for managing business communications and customer interactions.",
+      description: "Ongoing development of WhatsApp Business API integration for managing business communications and customer interactions. This comprehensive system enables businesses to manage customer communications at scale with advanced features and integrations.",
       technologies: [
         "Laravel",
         "Flutter",
@@ -84,16 +125,25 @@ export default function Projects() {
         "WhatsApp Business API",
         "Meta API",
         "RESTful API",
-        "PostgreSQL"
+        "PostgreSQL",
+        "Redis",
+        "Docker"
       ],
       features: [
-        "WhatsApp Business API integration",
-        "Customer message management",
-        "Automated responses",
-        "Multi-channel communication",
-        "Real-time messaging",
-        "Message templates",
-        "Customer database with PostgreSQL"
+        "WhatsApp Business API integration with Meta",
+        "Multi-channel customer communication management",
+        "Advanced automated response system",
+        "Real-time messaging with WebSocket support",
+        "Message template creation and management",
+        "Customer database with PostgreSQL integration",
+        "Conversation analytics and reporting",
+        "Multi-user team collaboration features",
+        "Message scheduling and automation",
+        "Customer segmentation and targeting",
+        "Integration with external CRM systems",
+        "Advanced security and compliance features",
+        "Mobile app integration with Flutter",
+        "Real-time dashboard with Livewire"
       ],
       images: [
         "/images/chatbot -meta/1.jpg",
@@ -106,27 +156,52 @@ export default function Projects() {
       hasGithub: false
     },
     {
+      id: 4,
       title: "10d.om – Online Shopping Website",
       company: "Innotech Company",
-      description: "E-commerce site for 3D printing products. Built with Laravel, included shopping cart, product management, and user features.",
-      technologies: ["Laravel", "MySQL", "E-commerce", "Payment Gateway"],
-      features: ["Shopping cart", "Product management", "User accounts", "Order processing"],
-      images: [
+      description: "E-commerce site for 3D printing products. Built with Laravel, included shopping cart, product management, and user features. This platform provides a complete online shopping experience with secure payments and order management.",
+      technologies: ["Laravel", "MySQL", "E-commerce", "Payment Gateway", "Bootstrap", "JavaScript"],
+      features: [
+        "Complete shopping cart functionality",
+        "Product catalog with categories and filters",
+        "User account management and profiles",
+        "Order processing and tracking system",
+        "Secure payment gateway integration",
+        "Inventory management system",
+        "Customer review and rating system",
+        "Wishlist and favorite products",
+        "Order history and invoice generation",
+        "Admin dashboard for store management",
+        "Email notifications for orders",
+        "Search functionality with filters"
       ],
+      images: [],
       liveDemo: "https://10d.om",
       hasImages: false,
       hasLiveDemo: true,
-
     },
     {
+      id: 5,
       title: "Innotech.om – Company Website",
       company: "Innotech Company",
-      description: "Official corporate website built with Squarespace. Led the complete website development including design customization, content strategy, and SEO implementation to establish strong online presence.",
-      technologies: ["Squarespace", "CSS", "SEO", "Responsive Design"],
-      features: ["Mobile-friendly", "SEO optimized", "Professional design", "Fast loading"],
+      description: "Official corporate website built with Squarespace. Led the complete website development including design customization, content strategy, and SEO implementation to establish strong online presence. The website showcases company services and portfolio with modern design principles.",
+      technologies: ["Squarespace", "CSS", "SEO", "Responsive Design", "JavaScript", "Google Analytics"],
+      features: [
+        "Mobile-first responsive design",
+        "Advanced SEO optimization techniques",
+        "Professional and modern UI/UX design",
+        "Fast loading performance optimization",
+        "Contact forms and lead generation",
+        "Portfolio and case studies showcase",
+        "Blog and content management system",
+        "Social media integration",
+        "Google Analytics integration",
+        "Multi-page navigation structure",
+        "Call-to-action optimization",
+        "Brand consistency across all pages"
+      ],
       images: [
         "/images/innotech/innotechHOME.jpg",
-
       ],
       liveDemo: "https://www.innotech.om",
       hasImages: true,
@@ -134,11 +209,25 @@ export default function Projects() {
       hasGithub: false
     },
     {
+      id: 6,
       title: "EstrenArrow Website",
       company: "Sahalat LLC",
-      description: "Corporate website built using Laravel PHP Framework with focus on responsive design and performance.",
-      technologies: ["Laravel", "PHP", "MySQL", "Bootstrap"],
-      features: ["Responsive design", "Performance optimized", "SEO friendly"],
+      description: "Corporate website built using Laravel PHP Framework with focus on responsive design and performance. This website represents the company's brand and services with modern web standards and optimal user experience.",
+      technologies: ["Laravel", "PHP", "MySQL", "Bootstrap", "JavaScript", "jQuery"],
+      features: [
+        "Fully responsive design for all devices",
+        "Performance optimization techniques",
+        "SEO-friendly structure and content",
+        "Modern and professional design",
+        "Fast loading times optimization",
+        "Cross-browser compatibility",
+        "Contact and inquiry forms",
+        "Service pages with detailed information",
+        "About us and company profile",
+        "Image galleries and portfolio",
+        "Social media integration",
+        "Regular content updates system"
+      ],
       images: [
         "/images/easternarrow.jpg",
       ],
@@ -147,17 +236,32 @@ export default function Projects() {
       hasLiveDemo: true,
     },
     {
+      id: 7,
       title: "Meeting Booking System",
-      description: "React-based room booking platform with real-time availability and modern UI.",
-      technologies: ["React", "JavaScript", "REST API", "CSS3"],
-      features: ["Booking system", "Room management", "Responsive design"],
+      description: "React-based room booking platform with real-time availability and modern UI. This system streamlines the process of booking meeting rooms with intuitive interface and comprehensive management features.",
+      technologies: ["React", "JavaScript", "REST API", "CSS3", "Context API", "Axios"],
+      features: [
+        "Real-time room availability checking",
+        "Advanced booking system with time slots",
+        "Room management and configuration",
+        "User authentication and authorization",
+        "Booking history and calendar view",
+        "Email notifications and reminders",
+        "Admin dashboard for room management",
+        "Recurring booking options",
+        "Room amenities and specifications",
+        "Booking approval workflow",
+        "Conflict detection and resolution",
+        "Reporting and analytics features"
+      ],
       images: [
         "/images/booking_system/login.jpg",
         "/images/booking_system/dashboard1.jpg",
         "/images/booking_system/dashboard2.jpg",
         "/images/booking_system/dashboard3.jpg",
         "/images/booking_system/mybooking.jpg",
-        "/images/booking_system/newbooking.jpg",      ],
+        "/images/booking_system/newbooking.jpg",
+      ],
       hasLiveDemo: false,
       hasGithub: false,
       hasImages: true,
@@ -190,7 +294,6 @@ export default function Projects() {
     }
   }
 
-  // Function to handle image error (if image doesn't exist)
   const handleImageError = (e) => {
     e.target.style.display = 'none'
     const parent = e.target.parentElement
@@ -201,7 +304,7 @@ export default function Projects() {
   }
 
   return (
-    <section id="projects" className="section-padding bg-white">
+    <section id="projects" className="section-padding bg-gradient-to-br from-gray-50 to-blue-50/30">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -210,10 +313,12 @@ export default function Projects() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">Projects</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto mb-8"></div>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            A collection of projects showcasing my skills in Web development,
+          <h2 className="text-4xl font-bold text-gray-800 mb-4">
+            My <span className="gradient-text">Projects</span>
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto mb-8 rounded-full"></div>
+          <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+            A collection of projects showcasing my skills in web development,
             from enterprise systems to innovative side projects.
           </p>
         </motion.div>
@@ -221,12 +326,12 @@ export default function Projects() {
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
-              key={index}
+              key={project.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
+              transition={{ delay: index * 0.1, duration: 0.6 }}
               viewport={{ once: true }}
-              className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100"
+              className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 card-hover group"
             >
               {/* Project Images Gallery */}
               {project.hasImages && project.images.length > 0 ? (
@@ -236,7 +341,6 @@ export default function Projects() {
                     className="rounded-xl overflow-hidden bg-gray-100 h-48 cursor-pointer relative group"
                     onClick={() => openImageModal(project, 0)}
                   >
-                    {/* Actual Image */}
                     <img
                       src={project.images[0]}
                       alt={`${project.title} - Main Preview`}
@@ -245,13 +349,10 @@ export default function Projects() {
                     />
 
                     {/* Fallback if image doesn't load */}
-                    <div className="image-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100">
+                    <div className="image-fallback absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blue-50 to-purple-50">
                       <div className="text-center">
                         <Image className="w-12 h-12 text-blue-600 mx-auto mb-2" />
-                        <p className="text-blue-600 font-medium">Image not found</p>
-                        <p className="text-blue-400 text-xs mt-1">
-                          Check: {project.images[0]}
-                        </p>
+                        <p className="text-blue-600 font-medium">Project Preview</p>
                       </div>
                     </div>
 
@@ -283,20 +384,13 @@ export default function Projects() {
                             src={img}
                             alt={`${project.title} - Thumbnail ${imgIndex + 1}`}
                             className="w-full h-full object-cover"
-                            onError={(e) => {
-                              e.target.style.display = 'none'
-                              const parent = e.target.parentElement
-                              const fallback = document.createElement('div')
-                              fallback.className = 'absolute inset-0 flex items-center justify-center bg-gray-300'
-                              fallback.innerHTML = `<span class="text-xs font-medium text-gray-600">${imgIndex + 1}</span>`
-                              parent.appendChild(fallback)
-                            }}
+                            onError={handleImageError}
                           />
                         </div>
                       ))}
                       {project.images.length > 4 && (
                         <div
-                          className="flex-shrink-0 w-16 h-16 rounded-lg bg-blue-100 cursor-pointer hover:bg-blue-200 transition-colors duration-200 flex items-center justify-center"
+                          className="flex-shrink-0 w-16 h-16 rounded-lg bg-gradient-to-r from-blue-100 to-purple-100 cursor-pointer hover:from-blue-200 hover:to-purple-200 transition-colors duration-200 flex items-center justify-center"
                           onClick={() => openImageModal(project, 0)}
                         >
                           <span className="text-xs font-medium text-blue-600">
@@ -308,7 +402,7 @@ export default function Projects() {
                   )}
                 </div>
               ) : (
-                <div className="mb-4 rounded-xl bg-gray-50 h-48 flex items-center justify-center border-2 border-dashed border-gray-200">
+                <div className="mb-4 rounded-xl bg-gradient-to-br from-gray-50 to-blue-50 h-48 flex items-center justify-center border-2 border-dashed border-gray-200">
                   <div className="text-center">
                     <Image className="w-8 h-8 text-gray-400 mx-auto mb-2" />
                     <p className="text-gray-500 text-sm">No Images Available</p>
@@ -318,12 +412,34 @@ export default function Projects() {
 
               {/* Project Title & Company */}
               <div className="mb-4">
-                <h3 className="text-xl font-bold text-gray-800 mb-2 line-clamp-2">{project.title}</h3>
+                <h3 className="text-xl font-bold text-gray-800 mb-2">{project.title}</h3>
                 <p className="text-blue-600 font-semibold text-sm">{project.company}</p>
               </div>
 
-              {/* Project Description */}
-              <p className="text-gray-600 mb-4 text-sm line-clamp-3">{project.description}</p>
+              {/* Project Description with Read More */}
+              <div className="mb-4">
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {expandedProjects[project.id] 
+                    ? project.description 
+                    : truncateText(project.description, 120)}
+                </p>
+                {project.description.length > 120 && (
+                  <button
+                    onClick={() => toggleReadMore(project.id)}
+                    className="flex items-center text-blue-600 hover:text-blue-700 font-medium text-xs mt-2 transition-colors duration-200"
+                  >
+                    {expandedProjects[project.id] ? (
+                      <>
+                        Read Less <ChevronUp className="w-3 h-3 ml-1" />
+                      </>
+                    ) : (
+                      <>
+                        Read More <ChevronDown className="w-3 h-3 ml-1" />
+                      </>
+                    )}
+                  </button>
+                )}
+              </div>
 
               {/* Technologies */}
               <div className="mb-4">
@@ -332,7 +448,7 @@ export default function Projects() {
                   {project.technologies.map((tech, idx) => (
                     <span
                       key={idx}
-                      className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium"
+                      className="bg-gradient-to-r from-blue-50 to-purple-50 text-blue-600 px-2 py-1 rounded-full text-xs font-medium border border-blue-200"
                     >
                       {tech}
                     </span>
@@ -340,22 +456,25 @@ export default function Projects() {
                 </div>
               </div>
 
-              {/* Features */}
+              {/* Features with Read More */}
               <div className="mb-6">
                 <h4 className="font-semibold text-gray-800 mb-2 text-sm">Key Features:</h4>
-                <ul className="text-gray-600 space-y-1 text-sm">
-                  {project.features.slice(0, 3).map((feature, idx) => (
-                    <li key={idx} className="flex items-start">
-                      <span className="text-blue-500 mr-2">•</span>
-                      <span>{feature}</span>
-                    </li>
+                <div className="space-y-1">
+                  {project.features.slice(0, expandedProjects[project.id] ? project.features.length : 3).map((feature, idx) => (
+                    <div key={idx} className="flex items-start">
+                      <span className="text-blue-500 mr-2 mt-1 flex-shrink-0">•</span>
+                      <span className="text-gray-600 text-sm leading-relaxed">{feature}</span>
+                    </div>
                   ))}
-                  {project.features.length > 3 && (
-                    <li className="text-gray-500 text-xs">
-                      +{project.features.length - 3} more features
-                    </li>
+                  {project.features.length > 3 && !expandedProjects[project.id] && (
+                    <button
+                      onClick={() => toggleReadMore(project.id)}
+                      className="flex items-center text-blue-600 hover:text-blue-700 font-medium text-xs mt-1 transition-colors duration-200"
+                    >
+                      +{project.features.length - 3} more features <ChevronDown className="w-3 h-3 ml-1" />
+                    </button>
                   )}
-                </ul>
+                </div>
               </div>
 
               {/* Action Buttons */}
@@ -366,7 +485,7 @@ export default function Projects() {
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-green-600 hover:text-green-700 font-medium text-sm transition-colors duration-200"
+                    className="flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-lg font-medium hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:-translate-y-1 text-sm"
                   >
                     <ExternalLink size={16} />
                     Live Demo
@@ -374,7 +493,7 @@ export default function Projects() {
                 ) : (
                   <button
                     disabled
-                    className="flex items-center gap-2 text-gray-400 font-medium text-sm cursor-not-allowed"
+                    className="flex items-center gap-2 bg-gray-100 text-gray-400 px-4 py-2 rounded-lg font-medium text-sm cursor-not-allowed"
                   >
                     <ExternalLink size={16} />
                     No Demo
@@ -382,12 +501,12 @@ export default function Projects() {
                 )}
 
                 {/* GitHub Button */}
-                {project.hasGithub && project.github ? (
+                {project.hasGithub ? (
                   <a
-                    href={project.github}
+                    href={project.github || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-2 text-gray-700 hover:text-gray-900 font-medium text-sm transition-colors duration-200"
+                    className="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-gray-200 transition-all duration-300 transform hover:-translate-y-1 text-sm"
                   >
                     <Github size={16} />
                     Code
@@ -395,7 +514,7 @@ export default function Projects() {
                 ) : (
                   <button
                     disabled
-                    className="flex items-center gap-2 text-gray-400 font-medium text-sm cursor-not-allowed"
+                    className="flex items-center gap-2 bg-gray-100 text-gray-400 px-4 py-2 rounded-lg font-medium text-sm cursor-not-allowed"
                   >
                     <Github size={16} />
                     Private
@@ -406,30 +525,12 @@ export default function Projects() {
                 {project.hasImages && project.images.length > 0 && (
                   <button
                     onClick={() => openImageModal(project, 0)}
-                    className="flex items-center gap-2 text-purple-600 hover:text-purple-700 font-medium text-sm transition-colors duration-200 ml-auto"
+                    className="flex items-center gap-2 bg-gradient-to-r from-purple-500 to-pink-500 text-white px-4 py-2 rounded-lg font-medium hover:from-purple-600 hover:to-pink-600 transition-all duration-300 transform hover:-translate-y-1 text-sm ml-auto"
                   >
                     <Image size={16} />
-                    View {project.images.length > 1 ? `${project.images.length} Images` : 'Image'}
+                    View Images
                   </button>
                 )}
-              </div>
-
-              {/* Status Badge */}
-              <div className="flex justify-between items-center mt-4 pt-3 border-t border-gray-100">
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${project.hasLiveDemo ? 'bg-green-500' : 'bg-gray-400'
-                    }`}></div>
-                  <span className="text-xs text-gray-500">
-                    {project.hasLiveDemo ? 'Demo Available' : 'No Demo'}
-                  </span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className={`w-2 h-2 rounded-full ${project.images.length > 0 ? 'bg-purple-500' : 'bg-gray-400'
-                    }`}></div>
-                  <span className="text-xs text-gray-500">
-                    {project.images.length > 0 ? `${project.images.length} Images` : 'No Images'}
-                  </span>
-                </div>
               </div>
             </motion.div>
           ))}
@@ -455,26 +556,11 @@ export default function Projects() {
 
               {/* Image Display */}
               <div className="relative bg-gray-900 flex items-center justify-center min-h-[400px] max-h-[60vh]">
-                {/* Actual Image Display */}
                 <img
                   src={selectedImage.images[currentImageIndex]}
                   alt={`${selectedImage.title} - Image ${currentImageIndex + 1}`}
                   className="max-w-full max-h-full object-contain"
-                  onError={(e) => {
-                    e.target.style.display = 'none'
-                    const parent = e.target.parentElement
-                    const fallback = document.createElement('div')
-                    fallback.className = 'flex items-center justify-center w-full h-full'
-                    fallback.innerHTML = `
-                      <div class="text-center text-white">
-                        <Image class="w-16 h-16 mx-auto mb-4 text-blue-400" />
-                        <p class="text-lg font-medium mb-2">Image not found</p>
-                        <p class="text-blue-300 text-sm">${selectedImage.images[currentImageIndex]}</p>
-                        <p class="text-gray-400 text-xs mt-2">Please check the file path</p>
-                      </div>
-                    `
-                    parent.appendChild(fallback)
-                  }}
+                  onError={handleImageError}
                 />
 
                 {/* Navigation Arrows */}
@@ -518,12 +604,7 @@ export default function Projects() {
                           src={img}
                           alt={`Thumbnail ${index + 1}`}
                           className="w-full h-full object-cover"
-                          onError={(e) => {
-                            e.target.style.display = 'none'
-                            const parent = e.target.parentElement
-                            parent.className += ' bg-gray-300 flex items-center justify-center'
-                            parent.innerHTML = `<span class="text-xs font-medium text-gray-600">${index + 1}</span>`
-                          }}
+                          onError={handleImageError}
                         />
                       </button>
                     ))}
@@ -533,26 +614,6 @@ export default function Projects() {
             </div>
           </div>
         )}
-
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="text-center mt-16"
-        >
-          <p className="text-gray-600 mb-6">
-            Want to see more of my work or discuss a project?
-          </p>
-          <a
-            href="#contact"
-            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-300 inline-flex items-center gap-2"
-          >
-            <ExternalLink size={18} />
-            Get In Touch
-          </a>
-        </motion.div>
       </div>
     </section>
   )
