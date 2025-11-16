@@ -26,8 +26,8 @@ export default function Projects() {
       id: 1,
       title: "Muain CRM & Services System",
       company: "Sahalat LLC",
-      description: "Laravel-based CRM system integrated with Ministry services. Built with Laravel 8, AJAX, MySQL, real-time socket notifications, and Bank Muscat payment gateway. This comprehensive system handles complex workflows, user management, and integrates with various government services for seamless operation.",
-      technologies: ["Laravel", "MySQL", "AJAX", "WebSockets", "Payment Gateway", "Real-time Notifications"],
+      description: "Laravel-based CRM system integrated with Ministry services. Built with Laravel, AJAX, MySQL, real-time socket notifications, and Bank Muscat payment gateway. This comprehensive system handles complex workflows, user management, and integrates with various government services for seamless operation.",
+      technologies: ["Laravel", "MySQL", "AJAX","", "WebSockets", "Payment Gateway", "Real-time Notifications"],
       features: [
         "Identity verification and validation",
         "Multi-level user roles and permissions",
@@ -86,8 +86,7 @@ export default function Projects() {
       technologies: ["Node.js", "Laravel", "Puppeteer", "WhatsApp API", "RESTful API", "MySQL"],
       features: [
         "Automated customer response system",
-        "24/7 customer support availability",
-        "Integration with CRM for customer data",
+        "customer support availability",
         "Multi-language support capabilities",
         "Advanced reporting and analytics dashboard",
         "Message template management",
@@ -237,7 +236,7 @@ export default function Projects() {
     },
     {
       id: 7,
-      title: "Meeting Booking System",
+      title: "Meeting Booking System - on-going",
       description: "React-based room booking platform with real-time availability and modern UI. This system streamlines the process of booking meeting rooms with intuitive interface and comprehensive management features.",
       technologies: ["React", "JavaScript", "REST API", "CSS3", "Context API", "Axios"],
       features: [
@@ -246,13 +245,8 @@ export default function Projects() {
         "Room management and configuration",
         "User authentication and authorization",
         "Booking history and calendar view",
-        "Email notifications and reminders",
         "Admin dashboard for room management",
         "Recurring booking options",
-        "Room amenities and specifications",
-        "Booking approval workflow",
-        "Conflict detection and resolution",
-        "Reporting and analytics features"
       ],
       images: [
         "/images/booking_system/login.jpg",
@@ -273,21 +267,16 @@ export default function Projects() {
       description: "A modern React.js e-commerce site featuring minimalist design and curated essential products. Built with a focus on user experience and clean aesthetics.",
       technologies: ["React.js", "React Router", "Context API", "CSS3", "Vite", "JSON API"],
       features: [
-        "React functional components with hooks",
+        "React functional components",
         "Centralized state management using Context API",
         "Product filtering by categories",
         "Dynamic shopping cart with quantity controls",
         "Responsive mobile-first design",
         "Smooth animations and transitions",
         "Professional branding implementation",
-        "Interactive product catalog",
         "Modern navigation system",
         "Form handling and validation",
-        "Reusable component architecture",
-        "Fast development with Vite",
-        "JSON-based data management",
         "Accessible user interface",
-        "Cross-browser compatibility"
       ],
       images: [
         "/images/thirty-line/home1.jpg",

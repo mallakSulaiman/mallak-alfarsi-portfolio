@@ -13,7 +13,6 @@ export default function Experience() {
       description: "Web development of CRM systems, chatbots, and business applications using Laravel, Livewire, React.js, Node.js, and modern web technologies.",
       achievements: [
         "Muain CRM development with real-time features",
-        "AI WhatsApp chatbots with OpenAI integration",
         "WhatsApp Business API system implementation",
         "Laravel corporate website development",
         "Payment gateway and API integrations",
@@ -33,7 +32,7 @@ export default function Experience() {
       ],
       icon: Code,
       color: "from-blue-500 to-cyan-500",
-      technologies: ["Laravel", "Livewire", "React.js", "Node.js", "MySQL", "AWS", "Git"]
+      technologies: ["Laravel", "Livewire", "React.js", "Node.js", "MySQL", "Git"]
     },
     {
       title: "Web Developer - Freelancer",
@@ -53,7 +52,7 @@ export default function Experience() {
       ],
       icon: Rocket,
       color: "from-purple-500 to-pink-500",
-      technologies: ["PHP", "JavaScript", "HTML/CSS", "WordPress", "SEO", "Responsive Design"]
+      technologies: ["PHP , Laravel ", "JavaScript", "HTML/CSS", "WordPress", "SEO", "Responsive Design"]
     },
     {
       title: "Software Engineering Training",
