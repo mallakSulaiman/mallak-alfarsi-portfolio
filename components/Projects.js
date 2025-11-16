@@ -155,31 +155,31 @@ export default function Projects() {
       hasLiveDemo: false,
       hasGithub: false
     },
-    {
-      id: 4,
-      title: "10d.om – Online Shopping Website",
-      company: "Innotech Company",
-      description: "E-commerce site for 3D printing products. Built with Laravel, included shopping cart, product management, and user features. This platform provides a complete online shopping experience with secure payments and order management.",
-      technologies: ["Laravel", "MySQL", "E-commerce", "Payment Gateway", "Bootstrap", "JavaScript"],
-      features: [
-        "Complete shopping cart functionality",
-        "Product catalog with categories and filters",
-        "User account management and profiles",
-        "Order processing and tracking system",
-        "Secure payment gateway integration",
-        "Inventory management system",
-        "Customer review and rating system",
-        "Wishlist and favorite products",
-        "Order history and invoice generation",
-        "Admin dashboard for store management",
-        "Email notifications for orders",
-        "Search functionality with filters"
-      ],
-      images: [],
-      liveDemo: "https://10d.om",
-      hasImages: false,
-      hasLiveDemo: true,
-    },
+    // {
+    //   id: 4,
+    //   title: "10d.om – Online Shopping Website",
+    //   company: "Innotech Company",
+    //   description: "E-commerce site for 3D printing products. Built with Laravel, included shopping cart, product management, and user features. This platform provides a complete online shopping experience with secure payments and order management.",
+    //   technologies: ["Laravel", "MySQL", "E-commerce", "Payment Gateway", "Bootstrap", "JavaScript"],
+    //   features: [
+    //     "Complete shopping cart functionality",
+    //     "Product catalog with categories and filters",
+    //     "User account management and profiles",
+    //     "Order processing and tracking system",
+    //     "Secure payment gateway integration",
+    //     "Inventory management system",
+    //     "Customer review and rating system",
+    //     "Wishlist and favorite products",
+    //     "Order history and invoice generation",
+    //     "Admin dashboard for store management",
+    //     "Email notifications for orders",
+    //     "Search functionality with filters"
+    //   ],
+    //   images: [],
+    //   liveDemo: "https://10d.om",
+    //   hasImages: false,
+    //   hasLiveDemo: true,
+    // },
     {
       id: 5,
       title: "Innotech.om – Company Website",
@@ -265,6 +265,43 @@ export default function Projects() {
       hasLiveDemo: false,
       hasGithub: false,
       hasImages: true,
+    },
+    {
+      id: 8,
+      title: "Thirty Line E-Commerce Platform",
+      company: "Personal Project",
+      description: "A modern React.js e-commerce site featuring minimalist design and curated essential products. Built with a focus on user experience and clean aesthetics.",
+      technologies: ["React.js", "React Router", "Context API", "CSS3", "Vite", "JSON API"],
+      features: [
+        "React functional components with hooks",
+        "Centralized state management using Context API",
+        "Product filtering by categories",
+        "Dynamic shopping cart with quantity controls",
+        "Responsive mobile-first design",
+        "Smooth animations and transitions",
+        "Professional branding implementation",
+        "Interactive product catalog",
+        "Modern navigation system",
+        "Form handling and validation",
+        "Reusable component architecture",
+        "Fast development with Vite",
+        "JSON-based data management",
+        "Accessible user interface",
+        "Cross-browser compatibility"
+      ],
+      images: [
+        "/images/thirty-line/home1.jpg",
+        "/images/thirty-line/home2.jpg",
+        "/images/thirty-line/products.jpg",
+        "/images/thirty-line/about1.jpg",       
+        "/images/thirty-line/about2.jpg",       
+        "/images/thirty-line/contact.jpg",       
+        "/images/thirty-line/cart.jpg",       
+      ],
+      hasImages: true,
+      hasLiveDemo: false,
+      hasGithub: false,
+     
     }
   ]
 
@@ -419,8 +456,8 @@ export default function Projects() {
               {/* Project Description with Read More */}
               <div className="mb-4">
                 <p className="text-gray-600 text-sm leading-relaxed">
-                  {expandedProjects[project.id] 
-                    ? project.description 
+                  {expandedProjects[project.id]
+                    ? project.description
                     : truncateText(project.description, 120)}
                 </p>
                 {project.description.length > 120 && (
