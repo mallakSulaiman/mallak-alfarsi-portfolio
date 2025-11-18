@@ -52,7 +52,7 @@ export default function Experience() {
       ],
       icon: Rocket,
       color: "from-purple-500 to-pink-500",
-      technologies: ["PHP , Laravel ", "JavaScript", "HTML/CSS", "WordPress", "SEO", "Responsive Design"]
+      technologies: ["PHP , Laravel ", "JavaScript", "HTML/CSS", "Squarespace", "SEO", "Responsive Design"]
     },
     {
       title: "Software Engineering Training",
