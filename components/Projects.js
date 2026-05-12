@@ -27,7 +27,7 @@ export default function Projects() {
       title: "Muain CRM & Services System",
       company: "Sahalat LLC",
   description: "CRM and services management system built with Laravel and MySQL, integrated with Ministry services and Bank Muscat payment gateway. Includes workflow automation, role management, ticket tracking, and real-time notifications.",
-      technologies: ["Laravel", "MySQL", "AJAX","", "WebSockets", "Payment Gateway", "Real-time Notifications"],
+      technologies: ["Laravel", "MySQL", "AJAX","WebSockets", "Payment Gateway", "Real-time Notifications"],
       features: [
         "Identity verification and validation",
         "Multi-level user roles and permissions",
