@@ -5,30 +5,48 @@ import { Calendar, MapPin, Building, Award, Target, Users, Zap, Code, Rocket } f
 
 export default function Experience() {
   const experiences = [
+    // {
+    //   title: "Web Developer",
+    //   company: "Sahalat LLC",
+    //   period: "16 Oct 2022 – 31 Oct 2025",
+    //   location: "Muscat, Oman",
+    //   description: "Web development of CRM systems, chatbots, and business applications using Laravel, Livewire, React.js, Node.js, and modern web technologies.",
+    //   achievements: [
+    //     "Muain CRM development with real-time features",
+    //     "WhatsApp Business API system implementation",
+    //     "Laravel corporate website development",
+    //     "Payment gateway and API integrations",
+    //     "Performance optimization and security enhancements",
+    //     "Collaborated with cross-functional teams",
+    //     "Maintained documentation and best practices",  
+    //     "Deployed applications to cloud platforms",
+    //     "Provided technical support and troubleshooting",
+    //     "Implemented user authentication and authorization",
+    //     "Utilized version control with Git and GitHub",
+    //     "Adopted Agile methodologies for project management",
+    //     "Integrated third-party services and APIs",
+    //     "Optimized database queries and schema design",
+    //     "Implemented caching strategies for improved performance",
+    //     "Wrote unit and integration tests to ensure code quality",
+    //     "Participated in client meetings to gather requirements",
+    //   ],
+    //   icon: Code,
+    //   color: "from-blue-500 to-cyan-500",
+    //   technologies: ["Laravel", "Livewire", "React.js", "Node.js", "MySQL", "Git"]
+    // },
     {
       title: "Web Developer",
       company: "Sahalat LLC",
       period: "16 Oct 2022 – 31 Oct 2025",
       location: "Muscat, Oman",
-      description: "Web development of CRM systems, chatbots, and business applications using Laravel, Livewire, React.js, Node.js, and modern web technologies.",
+      description: "Developed CRM systems, chatbots, and business applications using Laravel, Livewire, React.js, and Node.js.",
       achievements: [
-        "Muain CRM development with real-time features",
-        "WhatsApp Business API system implementation",
-        "Laravel corporate website development",
-        "Payment gateway and API integrations",
-        "Performance optimization and security enhancements",
-        "Collaborated with cross-functional teams",
-        "Maintained documentation and best practices",  
-        "Deployed applications to cloud platforms",
-        "Provided technical support and troubleshooting",
-        "Implemented user authentication and authorization",
-        "Utilized version control with Git and GitHub",
-        "Adopted Agile methodologies for project management",
-        "Integrated third-party services and APIs",
-        "Optimized database queries and schema design",
-        "Implemented caching strategies for improved performance",
-        "Wrote unit and integration tests to ensure code quality",
-        "Participated in client meetings to gather requirements",
+        "Developed Muain CRM with real-time features",
+        "Integrated WhatsApp Business API and payment gateways",
+        "Built and deployed Laravel-based business applications",
+        "Optimized application performance, security, and databases",
+        "Implemented authentication, APIs, and cloud deployment",
+        "Collaborated with teams using Git, GitHub, and Agile workflows"
       ],
       icon: Code,
       color: "from-blue-500 to-cyan-500",
@@ -141,7 +159,7 @@ export default function Experience() {
               {index < experiences.length - 1 && (
                 <div className="absolute left-8 top-20 w-0.5 h-full bg-gradient-to-b from-blue-200 to-purple-200 z-0"></div>
               )}
-              
+
               {/* Experience Card */}
               <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover relative z-10">
                 <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between mb-6">
@@ -150,13 +168,13 @@ export default function Experience() {
                     <div className={`bg-gradient-to-r ${exp.color} text-white p-4 rounded-2xl flex-shrink-0`}>
                       <exp.icon className="w-6 h-6" />
                     </div>
-                    
+
                     <div>
                       <h3 className="text-2xl font-bold text-gray-800">{exp.title}</h3>
                       <h4 className="text-xl text-blue-600 font-semibold">{exp.company}</h4>
                     </div>
                   </div>
-                  
+
                   <div className="flex flex-col sm:flex-row sm:items-center gap-4">
                     <div className="flex items-center gap-2 text-gray-600 bg-gray-50 px-3 py-2 rounded-lg">
                       <Calendar size={16} />
@@ -229,7 +247,7 @@ export default function Experience() {
               Other professional engagements and leadership experiences
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {additionalExperiences.map((exp, index) => (
               <motion.div
