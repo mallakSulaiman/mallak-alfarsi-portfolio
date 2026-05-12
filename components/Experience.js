@@ -46,7 +46,7 @@ export default function Experience() {
         "Built and deployed Laravel-based business applications",
         "Optimized application performance, security, and databases",
         "Implemented authentication, APIs, and cloud deployment",
-        "Collaborated with teams using Git, GitHub, and Agile workflows"
+        "Collaborated with teams using Git and GitHub"
       ],
       icon: Code,
       color: "from-blue-500 to-cyan-500",
