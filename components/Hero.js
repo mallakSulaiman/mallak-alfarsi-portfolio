@@ -56,7 +56,8 @@ export default function Hero() {
             </p>
 
             <p className="text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Software Engineer with 3+ years of experience working with Laravel, PHP, and JavaScript.
+              change this use clrear english 
+Software Engineer with 3+ years of experience working with Laravel, PHP, and JavaScript.
               Experienced in full-stack development, API integration, database-driv en systems,
               and delivering production-ready web solutions.
             </p>
