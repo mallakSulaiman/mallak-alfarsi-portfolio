@@ -32,9 +32,7 @@ export default function Skills() {
       color: "from-purple-500 to-pink-500",
       skills: [
         "MySQL",
-        "PostgreSQL",
-        "MongoDB",
-        "Redis"
+        "SQL"
       ]
     },
     {
@@ -43,9 +41,7 @@ export default function Skills() {
       color: "from-green-500 to-emerald-500",
       skills: [
         "Git & GitHub",
-        "Docker",
-        "Agile / Scrum",
-        "DevOps Basics",
+        "Docker", 
         "Postman",
         "Swagger",
         "Figma",
