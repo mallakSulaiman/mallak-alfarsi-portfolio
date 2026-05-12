@@ -110,33 +110,23 @@ export default function Projects() {
       id: 3,
       title: "WhatsApp Business API System",
       company: "Sahalat LLC",
-      description: "Ongoing development of WhatsApp Business API integration for managing business communications and customer interactions. This comprehensive system enables businesses to manage customer communications at scale with advanced features and integrations.",
+      description: "Business communication platform integrated with WhatsApp Business API for managing customer messaging, automation, and real-time communication.",
       technologies: [
         "Laravel",
         "Flutter",
         "Livewire",
         "WhatsApp Business API",
         "Meta API",
-        "RESTful API",
         "PostgreSQL",
         "Redis",
         "Docker"
       ],
       features: [
-        "WhatsApp Business API integration with Meta",
-        "Multi-channel customer communication management",
-        "Advanced automated response system",
-        "Real-time messaging with WebSocket support",
-        "Message template creation and management",
-        "Customer database with PostgreSQL integration",
-        "Conversation analytics and reporting",
-        "Multi-user team collaboration features",
-        "Message scheduling and automation",
-        "Customer segmentation and targeting",
-        "Integration with external CRM systems",
-        "Advanced security and compliance features",
+        "WhatsApp and Meta API integration",
+        "Real-time messaging and automation",
+        "Dashboard and analytics system",
         "Mobile app integration with Flutter",
-        "Real-time dashboard with Livewire"
+        "Multi-user communication management"
       ],
       images: [
         "/images/chatbot -meta/1.jpg",
