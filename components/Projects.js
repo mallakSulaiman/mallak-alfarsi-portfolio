@@ -82,35 +82,15 @@ export default function Projects() {
       id: 2,
       title: "Virtual Assistant Chatbot (WhatsApp)",
       company: "Sahalat LLC",
-      description: "Automated WhatsApp support bot using Node.js, Laravel, and Puppeteer to improve response times and efficiency. This system handles customer inquiries, provides automated responses, and integrates with existing CRM systems for seamless customer support management.",
+      description: "WhatsApp chatbot system built with Node.js and Laravel to automate customer support, manage conversations, and improve response time.",
       technologies: ["Node.js", "Laravel", "Puppeteer", "WhatsApp API", "RESTful API", "MySQL"],
       features: [
-        "Automated customer response system",
-        "customer support availability",
-        "Multi-language support capabilities",
-        "Advanced reporting and analytics dashboard",
-        "Message template management",
-        "Customer conversation history",
+        "Automated customer responses",
         "Real-time message processing",
-        "Multi-agent support system",
-        "Automated follow-up messages",
-        "Customer satisfaction tracking",
-        "Performance monitoring and optimization"
-      ],
-      images: [
-        "/images/WhatsApp/WhatsApp-dashboard.jpg",
-        "/images/WhatsApp/Main_menu_settings.jpg",
-        "/images/WhatsApp/Request.jpg",
-        "/images/WhatsApp/Request_detaiels.jpg",
-        "/images/WhatsApp/sampleOf_Reports.jpg",
-        "/images/WhatsApp/Statistics&Reports.jpg",
-        "/images/WhatsApp/Usage_statistics.jpg",
-        "/images/WhatsApp/WhatsApp-dashboard.jpg",
-        "/images/WhatsApp/WhatsApp_side.jpg",
-      ],
-      hasImages: true,
-      hasLiveDemo: false,
-      hasGithub: true
+        "CRM and WhatsApp integration",
+        "Reports and analytics dashboard",
+        "Conversation history and follow-up messages"
+      ]
     },
     {
       id: 3,
