@@ -78,7 +78,7 @@ Skilled in building full-stack web applications, integrating APIs, managing data
             </a>
 
             <a
-              href="/Mallak Al_Farsi_CV.pdf"
+              href="/Mallak Al_Farsi cv.pdf"
               download
               className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-medium shadow-lg hover:opacity-90 transition"
             >
