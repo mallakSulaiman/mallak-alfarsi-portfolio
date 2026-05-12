@@ -90,7 +90,21 @@ export default function Projects() {
         "CRM and WhatsApp integration",
         "Reports and analytics dashboard",
         "Conversation history and follow-up messages"
-      ]
+      ],
+      images: [
+        "/images/WhatsApp/WhatsApp-dashboard.jpg",
+        "/images/WhatsApp/Main_menu_settings.jpg",
+        "/images/WhatsApp/Request.jpg",
+        "/images/WhatsApp/Request_detaiels.jpg",
+        "/images/WhatsApp/sampleOf_Reports.jpg",
+        "/images/WhatsApp/Statistics&Reports.jpg",
+        "/images/WhatsApp/Usage_statistics.jpg",
+        "/images/WhatsApp/WhatsApp-dashboard.jpg",
+        "/images/WhatsApp/WhatsApp_side.jpg",
+      ],
+      hasImages: true,
+      hasLiveDemo: false,
+      hasGithub: true
     },
     {
       id: 3,
